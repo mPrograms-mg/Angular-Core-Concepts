@@ -1,0 +1,14 @@
+<div class="container mt-5">
+    <div [formGroup]="skillsForm">
+        <div formArrayName="skills">
+            <div *ngFor="let skill of skills.controls; let i = index">
+                <input [formControlName]="i" placeholder="Enter skill" />
+                <button type="button" (click)="removeSkill(i)">Remove</button>
+            </div>
+        </div>
+        <button type="button" (click)="addSkill()">Add Skill</button>
+    </div>
+
+    <button [disabled]="skillsForm.invalid" (click)="onSubmit()">Submit</button>
+
+</div>

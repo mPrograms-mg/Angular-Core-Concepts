@@ -1,0 +1,33 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+  <div>
+    <label for="name">Name:</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      [(ngModel)]="currentName"
+      required
+      #name="ngModel"
+    />
+
+    <div *ngIf="name.invalid && name.touched" class="error">
+      Name is required.
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="myForm.invalid">Submit</button>
+</form>
+
+<div>
+  <div>
+    <button type="button" (click)="setFilter('all')">All</button>
+    <button type="button" (click)="setFilter('pending')">Pending</button>
+    <button type="button" (click)="setFilter('completed')">Completed</button>
+  </div>
+  <ul *ngFor="let item of filterListData; let i = index">
+    <li [class.completed]="item.completed">{{ item.name }}</li>
+    <input type="checkbox" name="" id="" (change)="onCheck(item)" />complete
+    <button type="button" (click)="deleteItem(item)">Delete</button>
+    <button type="button" (click)="EditItem(i)">Edit</button>
+  </ul>
+</div>

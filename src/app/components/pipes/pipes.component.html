@@ -1,0 +1,30 @@
+<div>
+  <form [formGroup]="task">
+    <input type="text" name="task" id="" formControlName="name" />
+
+    <button type="submit" (click)="onSubmit()" *ngIf="!isEdit">Add</button>
+    <button type="submit" (click)="onEditTask()" *ngIf="isEdit">Update</button>
+  </form>
+
+  <div style="margin-top: 10px">
+    <div style="margin-bottom: 10px">
+      <!-- Task Filter Buttons -->
+      <button type="button" (click)="setFilter('all')">All</button>
+      <button type="button" (click)="setFilter('pending')">Pending</button>
+      <button type="button" (click)="setFilter('completed')">Completed</button>
+    </div>
+    <ul *ngFor="let item of filteredList; let i = index">
+      <li [class.completed]="item.completed">
+        {{ item?.name }}
+        <input
+          type="checkbox"
+          name="complete"
+          id=""
+          (change)="onComplete(item)"
+        />
+        <button type="button" (click)="onEdit(i)">Edit Task</button>
+        <button type="button" (click)="deleteItem(i)">Delete Task</button>
+      </li>
+    </ul>
+  </div>
+</div>
