@@ -8,9 +8,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { ReactiveFormsComponent } from './components/reactive-forms/reactive-forms.component';
 import { ParticlesComponent } from './components/particles/particles.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
-  declarations: [AppComponent, FormsArrayComponent, PipesComponent, ReactiveFormsComponent, ParticlesComponent],
+  declarations: [AppComponent, FormsArrayComponent, PipesComponent, ReactiveFormsComponent, ParticlesComponent, DashboardComponent, NavbarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

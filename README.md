@@ -6,4 +6,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Live Wesite URL
 
-Click To Show Live URL [Angular All In One](https://all-in-one-angular.vercel.app)
+Click To Live URL [Angular All In One](https://all-in-one-angular.vercel.app)

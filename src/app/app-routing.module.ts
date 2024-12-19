@@ -4,8 +4,13 @@ import { FormsArrayComponent } from './components/forms-array/forms-array.compon
 import { PipesComponent } from './components/pipes/pipes.component';
 import { ReactiveFormsComponent } from './components/reactive-forms/reactive-forms.component';
 import { ParticlesComponent } from './components/particles/particles.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    component: DashboardComponent,
+  },
   {
     path: 'formarray',
     component: FormsArrayComponent,
