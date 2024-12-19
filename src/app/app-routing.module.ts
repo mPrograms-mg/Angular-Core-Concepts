@@ -5,6 +5,7 @@ import { PipesComponent } from './components/pipes/pipes.component';
 import { ReactiveFormsComponent } from './components/reactive-forms/reactive-forms.component';
 import { ParticlesComponent } from './components/particles/particles.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ParentChildCommunicationsComponent } from './components/parent-child-communications/parent-child-communications.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'particles',
     component: ParticlesComponent,
+  },
+  {
+    path: 'ParentChildCommu',
+    component: ParentChildCommunicationsComponent,
   },
 ];
 

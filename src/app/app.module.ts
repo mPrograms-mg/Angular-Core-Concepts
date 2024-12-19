@@ -10,9 +10,10 @@ import { ReactiveFormsComponent } from './components/reactive-forms/reactive-for
 import { ParticlesComponent } from './components/particles/particles.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ParentChildCommunicationsComponent } from './components/parent-child-communications/parent-child-communications.component';
 
 @NgModule({
-  declarations: [AppComponent, FormsArrayComponent, PipesComponent, ReactiveFormsComponent, ParticlesComponent, DashboardComponent, NavbarComponent],
+  declarations: [AppComponent, FormsArrayComponent, PipesComponent, ReactiveFormsComponent, ParticlesComponent, DashboardComponent, NavbarComponent, ParentChildCommunicationsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
