@@ -1,0 +1,61 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Title:</label>
+    <input formControlName="title" />
+  </div>
+  <div>
+    <label>Description:</label>
+    <input formControlName="dec" />
+  </div>
+  <div>
+    <label>Image:</label>
+    <input type="file" (change)="onFileChange($event)" />
+  </div>
+  <div formGroupName="service">
+    <div>
+      <label>Service Description:</label>
+      <input formControlName="services_Dec" />
+    </div>
+    <div>
+      <label>Technologies:</label>
+      <input formControlName="technologies" />
+    </div>
+    <div formArrayName="servArray">
+      <div
+        *ngFor="let group of servArray.controls; let i = index"
+        [formGroupName]="i"
+      >
+        <label>Service Title:</label>
+        <input formControlName="title" />
+        <label>Service Description:</label>
+        <input formControlName="description" />
+        <button type="button" (click)="removeServiceGroup(i)">Remove</button>
+      </div>
+    </div>
+    <button type="button" (click)="addServiceGroup()">Add Service</button>
+  </div>
+  <div formGroupName="benefits">
+    <div>
+      <label>Benifits Description:</label>
+      <input formControlName="benefits_Dec" />
+    </div>
+    <div>
+      <label>Technologies:</label>
+      <input formControlName="benefits_technologies" />
+    </div>
+    <div formArrayName="bene_serArr">
+      <div
+        *ngFor="let benefirArr of benefitserArray.controls; let i = index"
+        [formGroupName]="i"
+      >
+        <label>Benefit Title:</label>
+        <input formControlName="title" />
+        <label>Benefit Description:</label>
+        <input formControlName="description" />
+        <button type="button" (click)="removeBenefitGrp(i)">Remove</button>
+      </div>
+    </div>
+    <button type="button" (click)="addBenefitArry()">Add Service</button>
+  </div>
+  <button type="submit">Submit</button>
+</form>

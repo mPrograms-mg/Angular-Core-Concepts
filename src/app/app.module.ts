@@ -11,9 +11,10 @@ import { ParticlesComponent } from './components/particles/particles.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ParentChildCommunicationsComponent } from './components/parent-child-communications/parent-child-communications.component';
+import { NestedFormGroupArrayComponent } from './components/nested-form-group-array/nested-form-group-array.component';
 
 @NgModule({
-  declarations: [AppComponent, FormsArrayComponent, PipesComponent, ReactiveFormsComponent, ParticlesComponent, DashboardComponent, NavbarComponent, ParentChildCommunicationsComponent],
+  declarations: [AppComponent, FormsArrayComponent, PipesComponent, ReactiveFormsComponent, ParticlesComponent, DashboardComponent, NavbarComponent, ParentChildCommunicationsComponent, NestedFormGroupArrayComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

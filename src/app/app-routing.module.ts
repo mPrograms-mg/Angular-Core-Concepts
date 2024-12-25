@@ -6,6 +6,7 @@ import { ReactiveFormsComponent } from './components/reactive-forms/reactive-for
 import { ParticlesComponent } from './components/particles/particles.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ParentChildCommunicationsComponent } from './components/parent-child-communications/parent-child-communications.component';
+import { NestedFormGroupArrayComponent } from './components/nested-form-group-array/nested-form-group-array.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'ParentChildCommu',
     component: ParentChildCommunicationsComponent,
+  },
+  {
+    path: 'NestedFormGroupArray',
+    component: NestedFormGroupArrayComponent,
   },
 ];
 
